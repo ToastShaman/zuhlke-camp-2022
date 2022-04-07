@@ -1,0 +1,14 @@
+{
+    "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:16",
+    "postCreateCommand": "npm install -g aws-cdk",
+    "features": {
+        "github-cli": "latest",
+        "aws-cli": "latest",
+        "docker-in-docker": {
+            "version": "latest"
+        }
+    },
+    "mounts": [
+        "source=${localEnv:HOME}/.aws,target=/root/.aws,type=bind,consistency=cached"
+    ]
+}
