@@ -3,8 +3,12 @@ import strikt.api.expectThat
 import strikt.assertions.containsExactly
 import strikt.assertions.first
 import strikt.assertions.map
+import java.net.URL
 import java.util.*
 
+/**
+ * https://kata-log.rocks/social-network-kata
+ */
 class SocialNetworkKataTest {
 
     @Test
@@ -66,10 +70,24 @@ class SocialNetworkKataTest {
             .post(Message("I am cooking dinner! Come over @Charlie"))
 
         expectThat(charlie.viewTimelineFrom(bob))
-            .get { message }
+            .get(ImmutableTimeline::message)
             .first()
-            .get { mentions }
+            .get(TimelineMessage::mentions)
             .containsExactly(charlie)
+    }
+
+    @Test
+    fun `Links - Alice can link to a clickable web resource in a message`() {
+        val network = TheSocialNetwork()
+
+        val alice = network.createUser(Username("Alice"))
+            .post(Message("Look at this video", Link(URL("https://bit.ly/3M8JUPv"))))
+
+        expectThat(alice.timeline)
+            .get(MutableTimeline::allMessages)
+            .first()
+            .get(TimelineMessage::links)
+            .containsExactly(Link(URL("https://bit.ly/3M8JUPv")))
     }
 }
 
@@ -92,7 +110,12 @@ class TheSocialNetwork {
 value class Username(val value: String)
 
 @JvmInline
-value class Message(val value: String) {
+value class Link(val url: URL)
+
+data class Message(
+    val value: String,
+    val link: Link? = null
+) {
     init {
         require(value.isNotBlank())
     }
@@ -108,7 +131,8 @@ value class Message(val value: String) {
 data class TimelineMessage(
     val user: User,
     val message: Message,
-    val mentions: List<User> = emptyList()
+    val mentions: List<User> = emptyList(),
+    val links: List<Link> = emptyList(),
 )
 
 interface Timeline {
@@ -139,7 +163,8 @@ data class User(
             TimelineMessage(
                 user = this,
                 message = message,
-                mentions = message.maybeMentions()?.let(network::find)?.let(::listOf).orEmpty()
+                mentions = message.maybeMentions()?.let(network::find)?.let(::listOf).orEmpty(),
+                links = message.link?.let(::listOf).orEmpty()
             )
         )
     }
