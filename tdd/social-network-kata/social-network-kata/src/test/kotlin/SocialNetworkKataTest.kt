@@ -2,6 +2,7 @@ import org.junit.jupiter.api.Test
 import strikt.api.expectThat
 import strikt.assertions.containsExactly
 import strikt.assertions.first
+import strikt.assertions.isEqualTo
 import strikt.assertions.map
 import java.net.URL
 import java.util.*
@@ -89,10 +90,26 @@ class SocialNetworkKataTest {
             .get(TimelineMessage::links)
             .containsExactly(Link(URL("https://bit.ly/3M8JUPv")))
     }
+
+    @Test
+    fun `Direct Messages - Mallory can send a private message to Alice`() {
+        val network = TheSocialNetwork()
+
+        val alice = network.createUser(Username("Alice"))
+
+        val mallory = network.createUser(Username("Mallory"))
+            .sendDM(alice, Message("How are you?"))
+
+        expectThat(alice.directMessages())
+            .first()
+            .get(DirectMessage::message)
+            .isEqualTo(Message("How are you?"))
+    }
 }
 
 class TheSocialNetwork {
     private val users = mutableMapOf<Username, User>()
+    private val directMessages = mutableMapOf<Username, List<DirectMessage>>()
 
     fun createUser(username: Username) = users
         .computeIfAbsent(username) {
@@ -104,6 +121,14 @@ class TheSocialNetwork {
         }
 
     fun find(username: Username) = users[username]
+
+    fun dm(
+        from: User,
+        to: User,
+        message: Message
+    ) = directMessages.merge(to.username, listOf(DirectMessage(from, to, message))) { a, b -> a + b }
+
+    fun dmFor(user: User) = directMessages.getOrDefault(user.username, emptyList())
 }
 
 @JvmInline
@@ -133,6 +158,12 @@ data class TimelineMessage(
     val message: Message,
     val mentions: List<User> = emptyList(),
     val links: List<Link> = emptyList(),
+)
+
+data class DirectMessage(
+    val from: User,
+    val to: User,
+    val message: Message
 )
 
 interface Timeline {
@@ -175,4 +206,10 @@ data class User(
         .map(User::timeline)
         .flatMap(MutableTimeline::allMessages)
         .let(::ImmutableTimeline)
+
+    fun sendDM(to: User, message: Message) = apply {
+        network.dm(this, to, message)
+    }
+
+    fun directMessages() = network.dmFor(this)
 }
