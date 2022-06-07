@@ -5,7 +5,7 @@ PWD := $(shell pwd)
 pdf: clean example $(DIAGRAMS_PNG)
 
 %.pdf: %.md
-	docker run --rm --init -v $(PWD):/home/marp/app/ -e LANG=EN marpteam/marp-cli $< -o ./build/$(notdir $@)
+	docker run --rm --init -v $(PWD):/home/marp/app/ -e LANG=EN marpteam/marp-cli $< --allow-local-files -o ./build/$(notdir $@)
 
 example: clean
 	docker run --rm -it -v $(PWD):/data minlag/mermaid-cli -i /data/example/example.md -o /data/build/example.md -t dark -b white -s 3

@@ -3,6 +3,13 @@ marp: true
 title: Threat Modelling
 paginate: true
 theme: default
+style: |
+  h1 { color: #44ccff; }
+  h2 { color: #4DA167; }
+  h3 { color: #B0F2B4; }
+  h4 { color: #E26D5A; }
+  h5 { color: #26547C; }
+  strong { color: #D138BF; }
 _class: invert
 _paginate: false
 ---
@@ -13,13 +20,43 @@ An introduction
 
 ---
 
-Threat modelling works to identify, communicate, and understand threats and mitigations within the context of protecting something of value.
+![bg 50%](./assets/xkcd_security.png)
 
 ---
 
-A threat model is a structured representation of all the information that affects the security of an application. In essence, it is a view of the application and its environment through the lens of security.
+# What if?
+
+Wouldn’t it be better to find security issues before you write a line of code?
 
 ---
+
+# Ways to find Security Issues
+
+* Static Analysis
+* Fuzzing
+* Penetration Test
+* Vulnerability Disclosures
+* Bug Bounty Programe
+
+---
+
+# ..and Threat Modelling
+
+* Think about security issues **early**!
+* Understand your requirements better
+* Prevent bugs before writing a single line of code
+
+---
+
+# What is Threat Modelling?
+
+Threat modelling works to **identify**, **communicate**, and **understand threats and mitigations** within the context of protecting something of **value**.
+
+A threat model is a **structured representation** of all the information that affects the security of an application. In essence, it is a view of the application and its environment through the **lens of security**.
+
+---
+
+# What does a Threat Model consist of?
 
 A threat model typically includes:
 
@@ -31,6 +68,8 @@ A threat model typically includes:
 
 ---
 
+# When do you do a Threat Model?
+
 Threat modelling is best applied **continuously** throughout a software development project!
 
 Updating threat models is advisable after events such as:
@@ -40,3 +79,31 @@ Updating threat models is advisable after events such as:
 * Architectural or infrastructure changes
 
 ---
+
+# How
+---
+
+![dd](../build/example-1.svg)
+
+---
+
+# References
+
+* [Lecture on Threat Modeling with STRIDE][1]
+* [OWASP Threat Modelling][2]
+* [Threat Modelling Cheat Sheet][3]
+* [Threat Modelling Cookbook][4]
+* [pytm: A Pythonic framework for threat modeling][5]
+* [mermaid: Mermaid lets you create diagrams and visualisations using text and code][6]
+* [MITRE ATT&CK: A knowledge base of adversary tactics and techniques][7]
+* [MITRE D3FEND: A knowledge graph of cybersecurity countermeasures][8]
+
+
+[1]: https://users.encs.concordia.ca/~clark/courses/1601-6150/scribe/L04c.pdf
+[2]: https://owasp.org/www-community/Threat_Modeling
+[3]: https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html
+[4]: https://owasp.org/www-project-threat-model-cookbook/
+[5]: https://github.com/izar/pytm
+[6]: https://mermaid-js.github.io/mermaid/#/
+[7]: https://attack.mitre.org/
+[8]: https://d3fend.mitre.org/
