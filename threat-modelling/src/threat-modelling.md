@@ -57,7 +57,9 @@ Wouldn’t it be better to find security issues before you write a line of code?
 
 Threat modelling works to **identify**, **communicate** and **understand threats and mitigations** within the context of protecting something of **value**.
 
-A threat model is a **structured representation** of all the information that affects the security of an application. In essence, it is a view of the application and its environment through the **lens of security**.
+A threat model is a **structured representation** of all the information that affects the security of an application.
+
+In essence, it is a view of the application and its environment through the **lens of security**.
 
 ---
 
@@ -85,7 +87,48 @@ Updating threat models is advisable after events such as:
 
 ---
 
-![bg 90%](../build/example-1.svg)
+## How to Threat Model
+
+1. What are you building?
+1. What can go wrong?
+1. What are you going to do about it?
+
+---
+
+## What are you building?
+
+* Create a model of the system
+  * Whiteboarding
+  * Brainstorming
+  * **Data Flow Diagrams** (preferred!)
+* Focus on **Assets**: valuable things the business cares about
+  * Something an attacker wants
+  * Something you want to protect
+  * A stepping stone?
+
+> Use tools such as [Mermaid][6] or [pytm][5] rather than drawaing diagrams by hand
+
+---
+
+![bg contain](./assets/data_flow_example.png)
+
+---
+
+## What can go wrong?
+
+* Fun to brainstorm
+* Methodologies:
+  * [STRIDE][9] (**S**poofing, **T**ampering, **R**epudiation, **I**nformation Disclosure, **D**enial of Service, **E**levation of Privileges)
+    * Consider how each STRIDE threat could impact each part of the model!
+    * [MITRE Att&ck][7] and [D3fend][8] can help if you get stuck
+  * [Attack Trees][11]
+* Structure helps get you to **completeness** and **predictability**
+  * Need an engineering approach: Predictable, Reliable, Scalable
+  * Can't be dependent on one brilliant person
+
+---
+
+![bg contain](../build/example-1.svg)
 
 ---
 
@@ -118,3 +161,4 @@ Updating threat models is advisable after events such as:
 [8]: https://d3fend.mitre.org/
 [9]: https://docs.microsoft.com/en-us/previous-versions/commerce-server/ee823878(v=cs.20)?redirectedfrom=MSDN
 [10]: https://devopedia.org/shift-left
+[11]: https://www.schneier.com/academic/archives/1999/12/attack_trees.html
