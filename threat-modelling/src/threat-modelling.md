@@ -152,6 +152,8 @@ Updating threat models is advisable after events such as:
 * [MITRE ATT&CK: A knowledge base of adversary tactics and techniques][7]
 * [MITRE D3FEND: A knowledge graph of cybersecurity countermeasures][8]
 * [The STRIDE Threat Model][9]
+* [Threat Modelling: 12 Available Methods][12]
+* [Secure by Design][13]
 
 [1]: https://users.encs.concordia.ca/~clark/courses/1601-6150/scribe/L04c.pdf
 [2]: https://owasp.org/www-community/Threat_Modeling
@@ -165,3 +167,4 @@ Updating threat models is advisable after events such as:
 [10]: https://devopedia.org/shift-left
 [11]: https://www.schneier.com/academic/archives/1999/12/attack_trees.html
 [12]: https://insights.sei.cmu.edu/blog/threat-modeling-12-available-methods/
+[13]: https://learning.oreilly.com/library/view/secure-by-design/9781617294358/
