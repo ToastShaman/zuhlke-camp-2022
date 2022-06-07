@@ -20,7 +20,7 @@
 
 1. Pick the programming language you want to use
 
-1. Start refactoring and swap roles every 25 minutes
+1. Start refactoring and swap roles every N-25 minutes
 
 [1]: https://www.cprime.com/resources/blog/etiquette-for-pair-programming/
 [2]: https://kata-log.rocks/tell-dont-ask-kata
