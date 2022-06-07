@@ -5,7 +5,7 @@ paginate: true
 theme: default
 style: |
   h1 { color: #44ccff; }
-  h2 { color: #4DA167; }
+  h2 { color: #44ccff; }
   h3 { color: #B0F2B4; }
   h4 { color: #E26D5A; }
   h5 { color: #26547C; }
@@ -20,7 +20,7 @@ _paginate: false
 
 # Threat Modelling
 
-An Introduction
+An Introduction by Kevin Denver
 
 ---
 
@@ -28,13 +28,13 @@ An Introduction
 
 ---
 
-# What if?
+## What if?
 
 Wouldn’t it be better to find security issues before you write a line of code?
 
 ---
 
-# Ways to find Security Issues
+## Ways to find Security Issues
 
 * Static Analysis
 * Fuzzing
@@ -44,7 +44,7 @@ Wouldn’t it be better to find security issues before you write a line of code?
 
 ---
 
-# ..and Threat Modelling
+## ..and Threat Modelling
 
 * Think about security issues **early**!
 * Understand your requirements better
@@ -53,7 +53,7 @@ Wouldn’t it be better to find security issues before you write a line of code?
 > Shift Left is a practice intended to find and prevent defects early in the software delivery process. [devopedia: Shift Left][10]
 ---
 
-# What is Threat Modelling?
+## What is Threat Modelling?
 
 Threat modelling works to **identify**, **communicate** and **understand threats and mitigations** within the context of protecting something of **value**.
 
@@ -61,7 +61,7 @@ A threat model is a **structured representation** of all the information that af
 
 ---
 
-# What does a Threat Model consist of?
+## What does a Threat Model consist of?
 
 A threat model typically includes:
 
@@ -73,7 +73,7 @@ A threat model typically includes:
 
 ---
 
-# When do you do a Threat Model?
+## When do you do a Threat Model?
 
 Threat modelling is best applied **continuously** throughout a software development project!
 
@@ -85,14 +85,18 @@ Updating threat models is advisable after events such as:
 
 ---
 
-# How
----
-
 ![bg 90%](../build/example-1.svg)
 
 ---
 
-# References
+## References
+<!-- _footer: https://github.com/ToastShaman/ -->
+
+<style scoped>
+  ul {
+    font-size: 60%;
+  }
+</style>
 
 * [Lecture on Threat Modeling with STRIDE][1]
 * [OWASP Threat Modelling][2]
