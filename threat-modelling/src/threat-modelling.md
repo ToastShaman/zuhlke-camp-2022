@@ -10,13 +10,17 @@ style: |
   h4 { color: #E26D5A; }
   h5 { color: #26547C; }
   strong { color: #D138BF; }
+  blockquote {
+    font-size: 60%;
+    margin-top: auto;
+  }
 _class: invert
 _paginate: false
 ---
 
 # Threat Modelling
 
-An introduction
+An Introduction
 
 ---
 
@@ -46,11 +50,12 @@ Wouldn’t it be better to find security issues before you write a line of code?
 * Understand your requirements better
 * Prevent bugs before writing a single line of code
 
+> Shift Left is a practice intended to find and prevent defects early in the software delivery process. [devopedia: Shift Left][10]
 ---
 
 # What is Threat Modelling?
 
-Threat modelling works to **identify**, **communicate**, and **understand threats and mitigations** within the context of protecting something of **value**.
+Threat modelling works to **identify**, **communicate** and **understand threats and mitigations** within the context of protecting something of **value**.
 
 A threat model is a **structured representation** of all the information that affects the security of an application. In essence, it is a view of the application and its environment through the **lens of security**.
 
@@ -83,7 +88,7 @@ Updating threat models is advisable after events such as:
 # How
 ---
 
-![dd](../build/example-1.svg)
+![bg 90%](../build/example-1.svg)
 
 ---
 
@@ -97,7 +102,7 @@ Updating threat models is advisable after events such as:
 * [mermaid: Mermaid lets you create diagrams and visualisations using text and code][6]
 * [MITRE ATT&CK: A knowledge base of adversary tactics and techniques][7]
 * [MITRE D3FEND: A knowledge graph of cybersecurity countermeasures][8]
-
+* [The STRIDE Threat Model][9]
 
 [1]: https://users.encs.concordia.ca/~clark/courses/1601-6150/scribe/L04c.pdf
 [2]: https://owasp.org/www-community/Threat_Modeling
@@ -107,3 +112,5 @@ Updating threat models is advisable after events such as:
 [6]: https://mermaid-js.github.io/mermaid/#/
 [7]: https://attack.mitre.org/
 [8]: https://d3fend.mitre.org/
+[9]: https://docs.microsoft.com/en-us/previous-versions/commerce-server/ee823878(v=cs.20)?redirectedfrom=MSDN
+[10]: https://devopedia.org/shift-left
