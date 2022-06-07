@@ -126,6 +126,8 @@ Updating threat models is advisable after events such as:
   * Need an engineering approach: Predictable, Reliable, Scalable
   * Can't be dependent on one brilliant person
 
+> See [Threat Modelling: 12 Available Methods][12]
+
 ---
 
 ![bg contain](../build/example-1.svg)
@@ -162,3 +164,4 @@ Updating threat models is advisable after events such as:
 [9]: https://docs.microsoft.com/en-us/previous-versions/commerce-server/ee823878(v=cs.20)?redirectedfrom=MSDN
 [10]: https://devopedia.org/shift-left
 [11]: https://www.schneier.com/academic/archives/1999/12/attack_trees.html
+[12]: https://insights.sei.cmu.edu/blog/threat-modeling-12-available-methods/
