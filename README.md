@@ -12,6 +12,8 @@ The client has given you the following requirements:
 
     **Note**: You can use [AWS Lambdas][6] or an alternative technology such as [AWS Fargate][7], [Amazon EKS][8], etc.
 
+    **Note**: Have a think about how you would test your cloud native application. See [Testcontainers][12], [Localstack][13] or [Dynamodb-local][14]
+
 1. The setup and configuration of the environment(s) needs to be automated and repeatable (Infrastructure as Code IaC).
 
     **Note**: You can use [Terraform][1] but maybe try one of these alternatives: [AWS CDK][2], [Pulumi][3] or [CDK for Terraform][4].
@@ -41,6 +43,8 @@ The client has given you the following requirements:
      **Note**: This is just an example and it's up to you to define an appropriate structure.
 
 1. To help with 24/7 support we want to measure the performance of our APIs and create dashboards.
+
+    **Note**: Explore how to instrument your code using [AWS X-Ray][15]
 
 ## Flights API
 
@@ -149,3 +153,7 @@ Signature: keyId=b0a20181-03bf-4e41-8c7b-35d67b583f9e,signature=MEUCIQCXBA6rjjRi
 [9]: https://docs.aws.amazon.com/kms/latest/developerguide/overview.html
 [10]: https://developer.android.com/training/safetynet/attestation
 [11]: https://www.serverless.com/
+[12]: https://www.testcontainers.org/modules/localstack/
+[13]: https://localstack.cloud/
+[14]: https://hub.docker.com/r/amazon/dynamodb-local/
+[15]: https://aws.amazon.com/xray/
