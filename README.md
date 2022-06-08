@@ -12,9 +12,11 @@ The client has given you the following requirements:
 
     **Note**: You can use [AWS Lambdas][6] or an alternative technology such as [AWS Fargate][7], [Amazon EKS][8], etc.
 
-1. The setup and configuration of the environment(s) needs to be automated and repeatable (Infrastructure as Code).
+1. The setup and configuration of the environment(s) needs to be automated and repeatable (Infrastructure as Code IaC).
 
     **Note**: You can use [Terraform][1] but maybe try one of these alternatives: [AWS CDK][2], [Pulumi][3] or [CDK for Terraform][4].
+
+    **Note**: Alternatively, if you want to skip the IaC feel free to use something like [Serverless Framework][11]
 
 1. For security reasons only clients with a valid API key are allowed to call the APIs.
 
@@ -146,3 +148,4 @@ Signature: keyId=b0a20181-03bf-4e41-8c7b-35d67b583f9e,signature=MEUCIQCXBA6rjjRi
 [8]: https://aws.amazon.com/eks/
 [9]: https://docs.aws.amazon.com/kms/latest/developerguide/overview.html
 [10]: https://developer.android.com/training/safetynet/attestation
+[11]: https://www.serverless.com/
