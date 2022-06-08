@@ -61,8 +61,7 @@
       </section>
 
       <section>
-        <span class="background-center"
-          style="background-image:url('static/images/xkcd_security.png'); background-size: 50%;"></span>
+        <figure><img class="aligncenter" src="static/images/xkcd_security.png" style="width: 40%"></figure>
       </section>
 
       <section class="bg-secondary">
@@ -71,16 +70,102 @@
         </div>
       </section>
 
-      <section class="aligncenter text-serif">
+      <section class="aligncenter">
         <div class="wrap">
           <div class="content-left">
             <h2>Ways to find security issues</h2>
           </div>
           <div class="content-left">
-            <ul>
-              <li>DD</li>
-            </ul>
+            <ul class="flexblock features">
+              <li>
+                <div>
+                  <h2>
+                    Static Analysis
+                  </h2>
+                  <p><a href="https://owasp.org/www-community/controls/Static_Code_Analysis">Static Code Analysis</a> is
+                    usually performed as part of a Code Review (also known as white-box testing) and is carried out at
+                    the Implementation phase of a Security Development Lifecycle (SDL).</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>
+                    Fuzzing
+                  </h2>
+                  <p><a href="https://owasp.org/www-community/Fuzzing">Fuzz testing or Fuzzing</a> is a Black Box
+                    software testing technique, which basically consists in finding implementation bugs using
+                    malformed/semi-malformed data injection in an automated fashion.</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>
+                    Penetration Test
+                  </h2>
+                  <p>A <a
+                      href="https://owasp.org/www-project-web-security-testing-guide/latest/3-The_OWASP_Testing_Framework/1-Penetration_Testing_Methodologies#owasp-testing-guides">penetration
+                      test</a>, colloquially known as a pen test, is an authorized simulated cyberattack on a computer
+                    system, performed to evaluate the security of the system.</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>
+                    Vulnerability Disclosure Programs
+                  </h2>
+                  <p>Security researchers, IT security teams, in-house developers, third-party developers and others who
+                    work with the vulnerable systems may disclose vulnerabilities directly to the parties responsible
+                    for the flawed systems.</p>
+                  <p>See <a
+                      href="https://cheatsheetseries.owasp.org/cheatsheets/Vulnerability_Disclosure_Cheat_Sheet.html">Vulnerability
+                      Disclosure Cheat Sheet</a></p>
+
+                </div>
+              </li>
           </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <h3>How to Threat Model?</h3>
+          <ul class="flexblock steps">
+            <li>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                  <path
+                    d="M240.8 4.779C250.3 10.61 256 20.91 256 32V104H345C348.6 90.2 361.1 80 376 80H464C490.5 80 512 101.5 512 128C512 154.5 490.5 176 464 176H376C361.1 176 348.6 165.8 345 152H256V224C256 235.1 250.3 245.4 240.8 251.2C231.4 257.1 219.6 257.6 209.7 252.6L17.69 156.6C6.848 151.2 0 140.1 0 128C0 115.9 6.848 104.8 17.69 99.38L209.7 3.378C219.6-1.581 231.4-1.051 240.8 4.779V4.779zM288 256C288 238.3 302.3 224 320 224H480C497.7 224 512 238.3 512 256V320C512 337.7 497.7 352 480 352H320C302.3 352 288 337.7 288 320V256zM128 384C145.7 384 160 398.3 160 416V480C160 497.7 145.7 512 128 512H32C14.33 512 0 497.7 0 480V416C0 398.3 14.33 384 32 384H128zM480 384C497.7 384 512 398.3 512 416V480C512 497.7 497.7 512 480 512H224C206.3 512 192 497.7 192 480V416C192 398.3 206.3 384 224 384H480z" />
+                </svg>
+              </span>
+              <h2>01. What are you building?</h2>
+              <p></p>
+            </li>
+            <li>
+              <div class="process step-2"></div>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                  <path
+                    d="M416 400V464C416 490.5 394.5 512 368 512H320V464C320 455.2 312.8 448 304 448C295.2 448 288 455.2 288 464V512H224V464C224 455.2 216.8 448 208 448C199.2 448 192 455.2 192 464V512H144C117.5 512 96 490.5 96 464V400C96 399.6 96 399.3 96.01 398.9C37.48 357.8 0 294.7 0 224C0 100.3 114.6 0 256 0C397.4 0 512 100.3 512 224C512 294.7 474.5 357.8 415.1 398.9C415.1 399.3 416 399.6 416 400V400zM160 192C124.7 192 96 220.7 96 256C96 291.3 124.7 320 160 320C195.3 320 224 291.3 224 256C224 220.7 195.3 192 160 192zM352 320C387.3 320 416 291.3 416 256C416 220.7 387.3 192 352 192C316.7 192 288 220.7 288 256C288 291.3 316.7 320 352 320z" />
+                </svg>
+              </span>
+              <h2>02. What can go wrong?</h2>
+              <p></p>
+            </li>
+            <li>
+              <div class="process step-3"></div>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                  <path
+                    d="M239.1 162.8C247.7 160.1 255.7 160 264 160H376C393.1 160 409.2 164.1 423.5 171.4C424.1 170.7 424.7 170 425.4 169.4L489.4 105.4C501.9 92.88 522.1 92.88 534.6 105.4C547.1 117.9 547.1 138.1 534.6 150.6L470.6 214.6C469.1 215.3 469.3 215.9 468.6 216.5C474.7 228.5 478.6 241.9 479.7 256H544C561.7 256 576 270.3 576 288C576 305.7 561.7 320 544 320H480C480 329.9 479.1 339.5 477.4 348.9L630.8 469.1C641.2 477.3 643.1 492.4 634.9 502.8C626.7 513.2 611.6 515.1 601.2 506.9L9.196 42.89C-1.236 34.71-3.065 19.63 5.112 9.196C13.29-1.236 28.37-3.065 38.81 5.112L239.1 162.8zM416 96V99.56C416 115.3 403.3 128 387.6 128H252.4C236.7 128 224 115.3 224 99.56V96C224 42.98 266.1 .001 320 .001C373 .001 416 42.98 416 96V96zM160.3 256C161.1 245.1 163.3 236.3 166.7 227.3L304 335.5V479.2C269.5 475.8 238.2 461.4 213.7 439.6L150.6 502.6C138.1 515.1 117.9 515.1 105.4 502.6C92.88 490.1 92.88 469.9 105.4 457.4L169.4 393.4C171.2 391.5 173.3 389.9 175.4 388.6C165.5 367.8 160 344.6 160 320H96C78.33 320 64 305.7 64 288C64 270.3 78.33 256 96 256H160.3zM336 479.2V360.7L430.8 435.4C405.7 459.6 372.7 475.6 336 479.2V479.2z" />
+                </svg>
+              </span>
+              <h2>03. What are you going to do about it?</h2>
+              <p></p>
+            </li>
+          </ul>
         </div>
       </section>
 
