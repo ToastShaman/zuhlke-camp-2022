@@ -84,6 +84,8 @@ Test-driven development follows a three-phase process:
 
 * [Learning Test-Driven Development][1]
 * [Mocks Aren't Stubs][2]
+* [Scientific Research Into Pair Programming][3]
 
 [1]: https://learning.oreilly.com/library/view/learning-test-driven-development/9781098106461/
 [2]: https://martinfowler.com/articles/mocksArentStubs.html
+[3]: https://tuple.app/pair-programming-guide/scientific-research-into-pair-programming
