@@ -2,7 +2,6 @@
 
 import glob
 import os
-from re import T
 import shutil
 import subprocess
 import jinja2
