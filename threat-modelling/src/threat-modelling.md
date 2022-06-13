@@ -437,6 +437,16 @@ https://threagile.io/
 
 ---
 
+![bg right 60%](./assets/threat_modelling_book.png)
+
+## Threat Modeling: Designing for Security
+
+*Threat Modeling: Designing for Security* is full of actionable, tested advice for software developers, systems architects and managers, and security professionals. From the very first chapter, it teaches the reader how to threat model. That is, how to use models to predict and prevent problems, even before you've started coding.
+
+https://www.amazon.co.uk/dp/1118809998
+
+---
+
 ## References
 <!-- _class: small-font -->
 
