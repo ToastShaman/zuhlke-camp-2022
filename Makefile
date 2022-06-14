@@ -1,4 +1,4 @@
-all: pair-programming threat-modelling
+all: pair-programming threat-modelling tdd
 .PHONY: all
 
 pair-programming:
