@@ -97,7 +97,7 @@ Test-driven development follows a three-phase process:
 
 ## Pitfalls of TDD
 
-* Tests need to be treated with the same respect and care as production code
+* Tests need to be treated with the same respect and care as production code (make them readable, refactor them)
 * Excessive use of mocking can hinder your ability to refactor
   * See [Mockists Are Dead. Long Live Classicists][7]
 * Testing the wrong thing or at the wrong level/abstraction
