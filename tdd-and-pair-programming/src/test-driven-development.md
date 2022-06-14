@@ -3,30 +3,31 @@ marp: true
 title: Test Driven Development (TDD)
 paginate: true
 theme: default
-backgroundColor: rgb(247 249 251)
+backgroundColor: rgb(255 255 255)
+color: rgb(77 77 77)
 style: |
   section { font-size: 1.4em; }
-  h2 { 
-    display: inline-block;
-    padding-left: 0.6em;
-    padding-top: 0.1em;
-    background: black;
-    color: #ffffff;
-  }
-  a { color: #5386e4; }
-  strong { color: #E3056C; }
+  a { color: rgb(152 91 156); }
+  strong { color: rgb(0 153 204); }
   blockquote {
     position: absolute;
     bottom: 1em;
     left: 3em;
     font-size: 60%;
-    /* margin-top: auto; */
+  }
+  section.title-slide h1 {
+    color: #F5F5F5;
+  }
+  section.title-slide p {
+    color: #DCDCDC;
   }
   section.interval-slide {
     text-align: center;
-    color: white;
     font-size: 250%;
     font-weight: bold;
+  }
+  section.interval-slide p {
+    color: white;
   }
   section.small-font {
     font-size: 95%;
@@ -47,15 +48,10 @@ style: |
     width: 50%;
   }
 ---
-
 <!-- _backgroundColor: #222222 -->
+<!-- _class: title-slide -->
 <!-- _paginate: false -->
 <!-- _footer: June 2022 -->
-
-<style scoped>
-  h1 { color: #F5F5F5; }
-  p { color: #DCDCDC; }
-</style>
 
 ![bg 50% opacity:.4](https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/svgs/solid/laptop-code.svg)
 

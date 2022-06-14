@@ -3,30 +3,31 @@ marp: true
 title: Threat Modelling
 paginate: true
 theme: default
-backgroundColor: rgb(247 249 251)
+backgroundColor: rgb(255 255 255)
+color: rgb(77 77 77)
 style: |
   section { font-size: 1.4em; }
-  h2 { 
-    display: inline-block;
-    padding-left: 0.6em;
-    padding-top: 0.1em;
-    background: black;
-    color: #ffffff;
-  }
-  a { color: #5386e4; }
-  strong { color: #E3056C; }
+  a { color: rgb(152 91 156); }
+  strong { color: rgb(0 153 204); }
   blockquote {
     position: absolute;
     bottom: 1em;
     left: 3em;
     font-size: 60%;
-    /* margin-top: auto; */
+  }
+  section.title-slide h1 {
+    color: #F5F5F5;
+  }
+  section.title-slide p {
+    color: #DCDCDC;
   }
   section.interval-slide {
     text-align: center;
-    color: white;
     font-size: 250%;
     font-weight: bold;
+  }
+  section.interval-slide p {
+    color: white;
   }
   section.small-font {
     font-size: 95%;
@@ -47,15 +48,10 @@ style: |
     width: 50%;
   }
 ---
-
 <!-- _backgroundColor: #222222 -->
+<!-- _class: title-slide -->
 <!-- _paginate: false -->
 <!-- _footer: June 2022 -->
-
-<style scoped>
-  h1 { color: #F5F5F5; }
-  p { color: #DCDCDC; }
-</style>
 
 ![bg 50% opacity:.4](https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/svgs/solid/skull.svg)
 
@@ -70,10 +66,9 @@ An Introduction by Kevin Denver
 > [XKCD: 538](https://xkcd.com/538/)
 
 ---
-
-<!-- _backgroundColor: #ee5166 -->
-<!-- _backgroundImage: "linear-gradient(315deg, #ee5166 10%, #E3056C 85%)" -->
 <!-- _class: interval-slide -->
+<!-- _backgroundColor: rgb(152,91,156) -->
+<!-- _backgroundImage: "linear-gradient(90deg, rgba(152,91,156,1) 10%, rgba(161,192,229,1) 100%)" -->
 
 ![bg 50% opacity:.1](https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/svgs/solid/rotate.svg)
 
@@ -166,9 +161,9 @@ Software Development Lifecycle (SDLC)
 > https://snyk.io/learn/secure-sdlc/best-practices/
 
 ---
-<!-- _backgroundColor: #ee5166 -->
-<!-- _backgroundImage: "linear-gradient(315deg, #ee5166 10%, #E3056C 85%)" -->
 <!-- _class: interval-slide -->
+<!-- _backgroundColor: rgb(152,91,156) -->
+<!-- _backgroundImage: "linear-gradient(90deg, rgba(152,91,156,1) 10%, rgba(161,192,229,1) 100%)" -->
 
 ![bg 50% opacity:.1](https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/svgs/solid/house-fire.svg)
 
