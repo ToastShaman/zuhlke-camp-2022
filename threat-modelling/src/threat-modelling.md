@@ -6,9 +6,19 @@ theme: default
 backgroundColor: rgb(255 255 255)
 color: rgb(77 77 77)
 style: |
-  section { font-size: 1.4em; }
-  a { color: rgb(152 91 156); }
-  strong { color: rgb(0 153 204); }
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,600;1,400&display=swap');
+  section { 
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.4em; 
+  }
+  a { 
+    color: rgb(152 91 156); 
+  }
+  strong { 
+    color: rgb(0 153 204);
+    font-weight: 600;
+  }
   blockquote {
     position: absolute;
     bottom: 1em;
