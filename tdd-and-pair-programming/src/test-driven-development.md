@@ -12,6 +12,9 @@ style: |
     font-weight: 400;
     font-size: 1.4em; 
   }
+  section::after {
+    font-size: 60%;
+  }
   a { 
     color: rgb(152 91 156); 
   }

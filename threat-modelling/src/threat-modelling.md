@@ -12,6 +12,9 @@ style: |
     font-weight: 400;
     font-size: 1.4em; 
   }
+  section::after {
+    font-size: 60%;
+  }
   a { 
     color: rgb(152 91 156); 
   }
@@ -397,6 +400,8 @@ flowchart LR
 
 ## pytm A Pythonic framework for threat modeling
 
+![bg right 95%](https://raw.githubusercontent.com/izar/pytm/master/.gitbook/assets/dfd.png)
+
 *Traditional threat modeling too often comes late to the party, or sometimes not at all. In addition, creating manual data flows and reports can be extremely time-consuming. The goal of pytm is to shift threat modeling to the left, making threat modeling more automated and developer-centric.*
 
 ```python
@@ -428,11 +433,13 @@ tm.process()
 
 *OWASP Threat Dragon is a modeling tool used to create threat model diagrams as part of a secure development lifecycle. Threat Dragon follows the values and principles of the threat modeling manifesto. It can be used to record possible threats and decide on their mitigations, as well as giving a visual indication of the threat model components and threat surfaces. Threat Dragon runs either as a web application or a desktop application.*
 
-![figure](https://pbs.twimg.com/media/C-SuPJuUMAAg2DL?format=jpg&name=large)
+![bg right 95%](https://pbs.twimg.com/media/C-SuPJuUMAAg2DL?format=jpg&name=large)
 
 > https://owasp.org/www-project-threat-dragon/
 
 ---
+
+![bg right 95%](./assets/threagile-dfd.png)
 
 ## Threagile: Agile Threat Modeling
 
