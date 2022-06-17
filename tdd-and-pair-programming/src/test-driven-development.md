@@ -115,6 +115,24 @@ Test-driven development follows a three-phase process:
 
 ---
 
+## Mocking and Stubbing
+
+* **Mocks** and **Stubs** are two different kinds of [Test Doubles](https://martinfowler.com/bliki/TestDouble.html).
+
+* You can use **test doubles** to replace objects you'd use in production with an implementation that helps you with testing.
+
+* **Dummy** objects are passed around but never actually used. Usually they are just used to fill parameter lists.
+
+* **Fake** objects actually have working implementations, but usually take some shortcut which makes them not suitable for production (an in memory database is a good example).
+
+* **Stubs** provide canned answers to calls made during the test, usually not responding at all to anything outside what's programmed in for the test. Stubs may also record information about calls, such as an email gateway stub that remembers the messages it 'sent', or maybe only how many messages it 'sent'.
+
+* **Mocks** objects pre-programmed with expectations which form a specification of the calls they are expected to receive.
+
+> https://martinfowler.com/articles/mocksArentStubs.html
+> https://martinfowler.com/bliki/TestDouble.html
+---
+
 ## References
 
 * [Learning Test-Driven Development][1]
