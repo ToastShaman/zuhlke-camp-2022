@@ -45,6 +45,8 @@ The client has given you the following requirements:
 1. To help with 24/7 support we want to measure the performance of our APIs and create dashboards.
 
     **Note**: Explore how to instrument your code using [AWS X-Ray][15]
+    
+1. Document the API with https://servirtium.dev/
 
 ## Flights API
 
