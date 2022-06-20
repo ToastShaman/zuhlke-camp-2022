@@ -206,6 +206,7 @@ Threat Modelling
 ![bg 80%](./assets/threat-modelling-howto.svg)
 
 ---
+<!-- _class: small-font -->
 
 ## What are we building?
 
@@ -219,13 +220,16 @@ Threat Modelling
   * Something you want to protect
   * A stepping stone?
 
+* Focus on **Software**: the software being built or a system being deployed
+  * Making an explicit model of your software helps you look for threats without getting bogged down in the many details that are required to make the software function properly
+  * Understandings differ, especially on large projects that have been running for a while, but finding where those understandings differ can be helpful in and of itself because it offers a focal point where threats are unlikely to be blocked. (*"I thought you were validating that for a SQL call!"*)
+
 * Define **Trust Boundaries**
   * A **trust boundary** and an **attack surface** are very similar views of the same thing.
   * An attack surface is a trust boundary and a direction from which an attacker could launch an attack.
   * Generally, the idea is that within a boundary or zone, there is a common level of security. Within such a zone, the components trust each other and do not have to question each other's integrity.
 
 > https://en.wikipedia.org/wiki/Data-flow_diagram
-
 ---
 
 ![bg 90%](https://mermaid.ink/svg/pako:eNp9kl1r2zAUhv_KQbtxwDGsrTPwSiHMuRh0W2hSdlH34tg6qUVsSeiDNJT-98lW3Ix91FfHr95Heo-OXlijOLGC7Tp1aFo0Dm7vKgnhs75-Mqhb-OKtUz2ZKKPWSfJN1aIjWGo9m0WZJK_kn6DqNcrjxIkkuSPrYLn--h61_LmJCkeHNVp6SMpTNXv8P7Y9iE6oKLqxfkii9g8qNAHzOXzMYCUdGbi3ZCT2BCg5rNHagzI8OG6G2G_54TowFxncKrX3eoSqSl5mYwUlORSdHakp-hkN5FUGm5ABfmzXo8n9lRjmGeQZbOnZDa6wuVOwbpUk-O77OhySjZH0uYsh0mJqIzKfhoRPQsLGNw1Ze-4jYk0XGixpB7Xykluwzqg9FR9WZb7IF2n8nR8Ed21xpZ8ngaMN78PgsYAc8s-_7fX2QtLTxNMwwzRe_ukQlrKw3qPg4a29DGzFXEs9VawIJUezr1glX4PP63B7tOLCKcOKHXaWUobeqc1RNqxwxtNkKgWG4fcn1-svvDDm3Q)
