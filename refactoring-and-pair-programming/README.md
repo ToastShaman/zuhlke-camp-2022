@@ -22,7 +22,7 @@
 
 1. Start refactoring and swap roles every N-25 minutes
 
-[1]: https://www.cprime.com/resources/blog/etiquette-for-pair-programming/
+[1]: https://github.com/ToastShaman/zuhlke-camp-2022/blob/open-space/pair-programming/build/pair-programming-guide.pdf
 [2]: https://kata-log.rocks/tell-dont-ask-kata
 [3]: https://kata-log.rocks/refactoring
 [4]: https://tuple.app/

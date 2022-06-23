@@ -28,7 +28,7 @@
 
     1. Swap roles when appropriate
 
-[1]: https://www.cprime.com/resources/blog/etiquette-for-pair-programming/
+[1]: https://github.com/ToastShaman/zuhlke-camp-2022/blob/open-space/pair-programming/build/pair-programming-guide.pdf
 [2]: https://kata-log.rocks/social-network-kata
 [3]: https://kata-log.rocks/no-primitives
 [4]: https://kata-log.rocks/tdd
