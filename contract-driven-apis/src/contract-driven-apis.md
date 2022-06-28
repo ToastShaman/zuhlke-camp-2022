@@ -120,9 +120,18 @@ Use of a test harness to enforce an implicit contract is best when the contract 
 
 ---
 
+## Tooling
+
+* https://github.com/stoplightio/prism
+
+* https://github.com/apiaryio/dredd/
+
+* https://pact.io/
+
+---
+
 ## References
 
-* [Consumer-Driven Contracts: A Service Evolution Pattern
-][1]
+* [Consumer-Driven Contracts: A Service Evolution Pattern][1]
 
 [1]: https://martinfowler.com/articles/consumerDrivenContracts.html
