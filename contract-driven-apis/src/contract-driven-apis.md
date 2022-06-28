@@ -43,7 +43,7 @@ style: |
     color: white;
   }
   section.small-font {
-    font-size: 95%;
+    font-size: 1.2em;
   }
   section.smaller-font {
     font-size: 80%;
@@ -72,38 +72,73 @@ An Introduction by Kevin Denver
 
 ---
 
-## What is Contract Testing?
+![bg 90%](https://martinfowler.com/articles/practical-test-pyramid/testPyramid.png)
 
-Contract testing is a technique for testing software application interfaces and integrations.
+---
 
-Contracts are typically either "provider driven" (where the team responsible for the provider application maintains and shares the contract with its consumers) or "consumer driven" (where the teams responsible for the consumers maintain and share the contracts).
+![bg right 60%](https://martinfowler.com/articles/practical-test-pyramid/httpIntegrationTest.png)
 
-> https://pactflow.io/what-is-contract-testing-page/
+## Disadvantages of End-To-End Test
+
+* Slow
+* Brittle / Flaky
+* Introduces coupling between teams
+* Increases blockers and dependencies
+* You can't start testing until the dependency has been fulfilled
+* Re-creating a test environment for a real-world scenario might not be possible
+
 ---
 <!-- _class: small-font -->
 
-## What is consumer driven contract testing?
+## Test Doubles
 
-Consumer driven contract testing is a type of contract testing that ensures that a provider is compatible with the expectations that the consumer has of it.
+![bg right 70%](https://martinfowler.com/articles/practical-test-pyramid/unitTest.png)
 
-### Explicit Contracts
+* **Mocks** and **Stubs** are two different kinds of Test Doubles.
 
-For synchronous protocols such as HTTP, a contract would typically contain a collection of request/response pairs. To verify the contract, each request would be sent to the provider, and the response compared to the expected one. If the actual responses match the expected responses, then the contract has been successfully verified. Any mismatches highlight an incompatibility between the consumer and provider.
+* You can use test doubles to replace objects you'd use in production with an implementation that helps you with testing.
 
-Use of an explicit contract is best when the provider is able to incorporate the contract verification step into its own build, providing fast feedback to ensure that no breaking changes are made. This is ideal as it means that breaking changes should not be able to make it into a production release of the application or library.
+* **Stubs** provide canned answers to calls made during the test, usually not responding at all to anything outside what's programmed in for the test.
 
-### Implicit contracts
+* **Mocks** are pre-programmed with expectations which form a specification of the calls they are expected to receive. They can throw an exception if they receive a call they don't expect and are checked during verification to ensure they got all the calls they were expecting.
 
-When explicit contracts cannot be used, a similar outcome can be achieved by using a provider test double when running consumer tests, and executing a test harness at regular intervals to ensure that the real provider and the doubled provider behave the same way. The test harness enforces an implicit contract with the provider.
-
-Use of a test harness to enforce an implicit contract is best when the contract verification process cannot be done during the provider's build - for example, for a public API or an OSS code library. While it won't stop breaking changes being released, it will ensure that they are highlighted as soon as possible.
-
-> https://pactflow.io/what-is-consumer-driven-contract-testing/
+> https://martinfowler.com/bliki/TestDouble.html
 
 ---
 
-![bg 60%](https://docs.pact.io/img/how-pact-works/summary.png)
+![bg right 70%](https://martinfowler.com/articles/practical-test-pyramid/unitTest.png)
 
+## Disadvantages of Test Doubles
+
+* No way of knowing whether it'll work in production
+* No quick feedback loop when the dependency changes
+
+---
+
+![bg right 70%](https://martinfowler.com/articles/practical-test-pyramid/contract_tests.png)
+
+As you often spread the consuming and providing services across different teams you find yourself in the situation where you have to clearly specify the interface between these services (the so called **contract**).
+
+---
+![bg right 70%](https://martinfowler.com/articles/practical-test-pyramid/contract_tests.png)
+
+* Write a long and detailed interface specification (**the contract**)
+* Implement the providing service according to the defined contract
+* Throw the interface specification over the fence to the consuming team
+* Wait until they implement their part of consuming the interface
+* Run some large-scale manual system test to see if everything works
+* Hope that both teams stick to the interface definition forever and don't screw up
+* [OpenAPI][3] or [API Blueprint][4]
+
+> https://martinfowler.com/articles/practical-test-pyramid.html
+
+---
+
+![bg right 70%](https://martinfowler.com/articles/practical-test-pyramid/cdc_tests.png)
+
+Consumer-Driven Contract tests (CDC tests) let the **consumers drive the implementation of a contract**. Using CDC, consumers of an interface write tests that check the interface for all data they need from that interface. The consuming team then **publishes** these tests so that the publishing team can fetch and execute these tests easily. The providing team can now develop their API by running the CDC tests. Once all tests pass they know they have implemented everything the consuming team needs.
+
+> https://martinfowler.com/articles/practical-test-pyramid.html
 ---
 
 ## Benefits
@@ -122,16 +157,20 @@ Use of a test harness to enforce an implicit contract is best when the contract 
 
 ## Tooling
 
-* https://github.com/stoplightio/prism
-
-* https://github.com/apiaryio/dredd/
-
 * https://pact.io/
+* https://github.com/stoplightio/prism
+* https://github.com/apiaryio/dredd/
 
 ---
 
 ## References
 
 * [Consumer-Driven Contracts: A Service Evolution Pattern][1]
+* [The Practical Test Pyramid][2]
+* [OpenAPI Specification][3]
+* [API Blueprint][4]
 
 [1]: https://martinfowler.com/articles/consumerDrivenContracts.html
+[2]: https://martinfowler.com/articles/practical-test-pyramid.html
+[3]: https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md
+[4]: https://apiblueprint.org/
