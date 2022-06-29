@@ -111,7 +111,7 @@ An Introduction by Kevin Denver
 ## Disadvantages of Test Doubles
 
 * No way of knowing whether it'll work in production
-* No quick feedback loop when the dependency changes
+* No way of knowing when the dependency changes
 
 ---
 
@@ -169,8 +169,10 @@ Consumer-Driven Contract tests (CDC tests) let the **consumers drive the impleme
 * [The Practical Test Pyramid][2]
 * [OpenAPI Specification][3]
 * [API Blueprint][4]
+* [A Comprehensive Guide to Contract Testing APIs in a Service Oriented Architecture][5]
 
 [1]: https://martinfowler.com/articles/consumerDrivenContracts.html
 [2]: https://martinfowler.com/articles/practical-test-pyramid.html
 [3]: https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md
 [4]: https://apiblueprint.org/
+[5]: https://lirantal.medium.com/a-comprehensive-guide-to-contract-testing-apis-in-a-service-oriented-architecture-5695ccf9ac5a
